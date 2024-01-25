@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/images/VirtualXLogo-1- 1.svg";
+import Logo from "../../public/images/AgaGoldy-logo-primary.jpeg";
 import PrimaryBtn from "../ui/PrimaryBtn";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Data from './config.json'
+import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
+import Data from "./config.json";
 
 import {
   getDefaultWallets,
@@ -22,17 +22,22 @@ import {
   walletConnectWallet,
 } from "@rainbow-me/rainbowkit/wallets";
 
-import { configureChains, createConfig, useAccount, useContractWrite, usePrepareSendTransaction, useSendTransaction, WagmiConfig } from "wagmi";
+import {
+  configureChains,
+  createConfig,
+  useAccount,
+  useContractWrite,
+  usePrepareSendTransaction,
+  useSendTransaction,
+  WagmiConfig,
+} from "wagmi";
 import { bscTestnet, bsc, polygonMumbai } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { parseEther } from "viem";
 
 const projectId = "da2ffc3f8eb0b295ff1ec21d73e08f8a";
 
-const { chains, publicClient } = configureChains(
-  [bsc],
-  [publicProvider()]
-);
+const { chains, publicClient } = configureChains([bsc], [publicProvider()]);
 const { wallets } = getDefaultWallets({
   appName: "Virtual X",
   projectId,
@@ -59,27 +64,36 @@ const wagmiConfig = createConfig({
   publicClient,
 });
 const Header = () => {
-  const {contractAddress,ABI} = Data;
-  const { address, isConnecting, isDisconnected } = useAccount()
+  const { contractAddress, ABI } = Data;
+  const { address, isConnecting, isDisconnected } = useAccount();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const Address = address
-  const [tokensToSend,setTokensToSend] = useState<string>("")
+  const Address = address;
+  const [tokensToSend, setTokensToSend] = useState<string>("");
 
+  const { data, isLoading, isSuccess, sendTransaction } = useSendTransaction({
+    to: Data.contractAddress,
+    value: parseEther(tokensToSend),
+  });
 
-
-
-const { data, isLoading, isSuccess, sendTransaction } = useSendTransaction({
-  to : Data.contractAddress,
-  value : parseEther(tokensToSend)
-})
-
+  const wagmiConfig = createConfig({
+    autoConnect: true,
+    connectors,
+    publicClient,
+  });
 
   return (
     <header className="main-container bg-dark flex justify-between items-center rounded-[38px] mt-10 py-[13px] px-[28px] relative z-20">
       {/* logo */}
-      <div className="logo">
-        <Image src={Logo} alt="logo" className="w-28 md:w-[218px]" />
+      <div className="logo flex items-center">
+        <Image
+          src={Logo}
+          alt="logo"
+          className="w-20 md:w-[120px] rounded-full"
+        />
+        <p>
+          <h1 className="text-brandColor ml-5 pt-3d">MYGT</h1>
+        </p>
       </div>
 
       {/* mobile menu button */}
@@ -129,17 +143,28 @@ const { data, isLoading, isSuccess, sendTransaction } = useSendTransaction({
             chains={chains}
             appInfo={VirtualXInfo}
             modalSize="compact"
+            theme={darkTheme({
+              accentColor: "#EAB308",
+              borderRadius: "large",
+            })}
           >
-            <div><ConnectButton /></div>
+            <div>
+              <ConnectButton />
+            </div>
           </RainbowKitProvider>
-
         </WagmiConfig>
-        )
+
         <PrimaryBtn download={true} text="Whitepaper" />
-        {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
-        <input value={tokensToSend} type="number" style={{WebkitAppearance : "none"}} className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink" placeholder="BNB's To Invest" onChange={(e) => {
+        <PrimaryBtn
+          action={() => {
+            sendTransaction();
+            setTokensToSend("");
+          }}
+          text="Contact"
+        />
+        {/* <input value={tokensToSend} type="number" style={{WebkitAppearance : "none"}} className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink" placeholder="BNB's To Invest" onChange={(e) => {
           setTokensToSend(e.target.value)
-        }}/>
+        }}/> */}
       </div>
 
       {/* Mobile Menu */}
@@ -148,22 +173,30 @@ const { data, isLoading, isSuccess, sendTransaction } = useSendTransaction({
           className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48  bg-dark transition-all rounded-[42px] fade-right`}
         >
           <div className="flex flex-col mx-auto gap-3 w-[200px]">
-          <WagmiConfig config={wagmiConfig}>
-          <RainbowKitProvider
-            chains={chains}
-            appInfo={VirtualXInfo}
-            modalSize="compact"
-          >
-            <div><ConnectButton /></div>
-          </RainbowKitProvider>
-
-        </WagmiConfig>
-        )
-        <PrimaryBtn download={true} text="Whitepaper" />
-        {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
-        <input value={tokensToSend} type="number" style={{WebkitAppearance : "none"}} className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink" placeholder="BNB's To Invest" onChange={(e) => {
-          setTokensToSend(e.target.value)
-        }}/>
+            <WagmiConfig config={wagmiConfig}>
+              <RainbowKitProvider
+                chains={chains}
+                appInfo={VirtualXInfo}
+                modalSize="compact"
+              >
+                <div>
+                  <ConnectButton />
+                </div>
+              </RainbowKitProvider>
+            </WagmiConfig>
+            )
+            <PrimaryBtn download={true} text="Whitepaper" />
+            {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
+            <input
+              value={tokensToSend}
+              type="number"
+              style={{ WebkitAppearance: "none" }}
+              className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
+              placeholder="BNB's To Invest"
+              onChange={(e) => {
+                setTokensToSend(e.target.value);
+              }}
+            />
           </div>
         </div>
       )}

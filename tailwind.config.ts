@@ -34,12 +34,12 @@ const config: Config = {
         SourceSans3: ['var(--font-source-sans-3)'],
       },
       colors: {
-        brandColor: '#215FFF',
-        lightPink: '#FF9EEA',
-        dark: '#1C1C1E',
-        dark2: '#8A8A8E',
-        light: '#F2F2F7',
-        light2: '#FFFFFF',
+        brandColor: '#EAB308', // blue
+        lightPink: '#3B82F6', // pinkish 
+        dark: '#', //black
+        dark2: '#8A8A8E', //gray
+        light: '#F2F2F7', //ash white 
+        light2: '#FFFFFF', //Milky White
       }
     },
   },

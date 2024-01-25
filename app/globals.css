@@ -4,10 +4,10 @@
 
 body {
   padding-top: 12px;
-  background-color: #1c1c1e;
+  background-color: #00003f;
   font-family: "Space Grotesk", sans-serif;
   position: relative;
-  background-image: url("/images/Virtual X Kimp.png");
+  background-image: url("/images/Virtual X Kimp.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -75,7 +75,7 @@ h3 {
   font-weight: 700;
   padding: 10px 30px;
   border-radius: 21.285px;
-  background: linear-gradient(158deg, rgb(53, 53, 53) 0%, rgb(53, 53, 53) 38.55%, rgba(151, 71, 255, 0.4) 100%);
+  background: linear-gradient(158deg, rgb(2, 6, 122) 0%, rgb(1, 2, 56) 38.55%, rgba(74, 71, 255, 0.822) 100%);
 }
 
 .logo {
