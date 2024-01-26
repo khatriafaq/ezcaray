@@ -67,10 +67,11 @@ const Footer = () => {
     <div className="bg-black py-16 lg:px-52 md:px-8 px-8 flex justify-center flex-col ">
       <div className="flex justify-center md:justify-between text-white flex-col md:flex-row">
         <div className="py-4">
-          <Image src={Logo} alt="logo" className="mb-5" width={197.26} height={60.67} />
-          <p className="font-normal text-dark2">The future of Mobile is here
-            <br /> powered by cryptocurrencies &
-            <br /> blockchain technology</p>
+          {/* <Image src={Logo} alt="logo" className="mb-5" width={197.26} height={60.67} /> */}
+          <p className="font-normal text-dark2">SHAPING TOMORROW'S FINANCES, BACKED BY THE TIMELESS VALUE
+            <br /> OF GOLD. POWERED BY CRYPTOCURRENCIES,
+            <br /> BLOCKCHAIN TECHNOLOGY &
+            <br /> ARTIFICAL INTELLEGANCE. </p>
           <div className="flex mt-[48px]">
             {SocialLink.map((data, index) => (
               <div key={index}>
@@ -112,7 +113,7 @@ const Footer = () => {
         <hr className="bg-[#E2E8F0] h-px my-5" />
       </div>
       <div className="text-dark2 flex justify-center text-center">
-        &copy; Copyright {new Date().getFullYear()}, All Rights Reserved by VIRTUALX
+        &copy; Copyright {new Date().getFullYear()}, All Rights Reserved by MYGT
       </div>
     </div>
   );

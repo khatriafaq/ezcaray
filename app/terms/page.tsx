@@ -14,7 +14,7 @@ const Terms = () => {
         </div>
       </header>
 
-      <main className='mx-auto max-w-[1100px] pb-40 text-justify'>
+      <main className='mx-auto max-w-[1100px] pb40 text-justify'>
         {/* point 1 */}
         <div className='terms-container md:mx-8 xl:mx-0'>
           <h2>Introduction</h2>

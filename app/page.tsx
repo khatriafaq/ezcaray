@@ -46,45 +46,45 @@ export default function Home() {
             src={Phone}
             alt="phone"
             quality={90}
-            className="scale-125 xl:scale-75 rounded-xl"
+            className="scale-125 xl:scale-75 rounded-3xl"
           />
         </div>
       </section>
 
       <section className="main-container flex flex-col md:flex-row text-white bg-dark rounded-[57px] pb-0 md:pb-10 xl:pb-0 md:px-2 md:mb-40 relative z-20 xxl:-mt-16  xxl:top-[-6px] ">
-        <div className="md:absolute md:-bottom-1 md:right-0 md:w-1/2 xl:w-[60%] xl:-ml-8 xl:static flex items-end order-2 md:order-1">
+        {/* <div className="md:absolute md:-bottom-1 md:right-0 md:w-1/2 xl:w-[60%] xl:-ml-8 xl:static flex items-end order-2 md:order-1">
           <Image
             src={PhoneDisply}
             alt="phoneDisply"
             className=" xl:w-full xl:h-full"
           />
-        </div>
+        </div> */}
 
         <div className="ml-4 xl:w-[40%] my-16 order-1 xl:order-2">
-          <div className="xl:text-4xl text-2xl font-bold xxl:text-6xl">
+          {/* <div className="xl:text-4xl text-2xl font-bold xxl:text-6xl">
             <span className="text-dark2">Mobile Network</span> <br /> Built for
             Crypto
-          </div>
-          <p className="text-dark2 font-bold xxl:text-2xl my-6 pr-40">
+          </div> */}
+          {/* <p className="text-dark2 font-bold xxl:text-2xl my-6 pr-40">
             Buy mobile bundles & packages using fiat & cryptocurrencies.
-          </p>
-          <p className="text-dark2 font-bold xxl:text-2xl pr-20">
+          </p> */}
+          {/* <p className="text-dark2 font-bold xxl:text-2xl pr-20">
             VMobile utilises embedded e-SIM technology and blockchain technology
             to help you instantly activate your phone on VMobile network using
             VMobile app.
-          </p>
+          </p> */}
 
           {/* <button className="font-SourceSans3 bg-brandColor mt-8 text-2xl px-8 font-bold leading-150 hover:bg-transparent border border-brandColor hover:text-brandColor text-white py-4 rounded-2xl">Buy PreSale</button> */}
         </div>
       </section>
-
+{/* 
       <AboutUsSection />
 
       <RoadMapSection />
 
       <TeamSection />
 
-      <Faqs faqs={FaqsData} />
+      <Faqs faqs={FaqsData} /> */}
     </main>
   );
 }
