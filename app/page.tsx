@@ -41,7 +41,7 @@ export default function Home() {
         </div>
 
         {/* phone image container*/}
-        <div className="w-full xl:flex items-end xl:left-[127px] xxl:left-[112px] relative z-10 pt-4 -ml-6 mb-10 md:-ml-14 xl:-ml-0 xl:-mt-20 xl:pt-2 xl:-mb-[4rem] xl:-mr-2 xxl:-mt-24 xxl:mb-[3rem] xxl:-mr-10">
+        <div className="w-full xl:flex items-end xl:left-[127px] xxl:left-[112px] relative z-10 pt-12 -ml-6 mb-10 md:-ml-14 xl:-ml-0 xl:-mt-20 xl:pt-2 xl:-mb-[4rem] xl:-mr-2 xxl:-mt-24 xxl:mb-[3rem] xxl:-mr-10">
           <Image
             src={Phone}
             alt="phone"

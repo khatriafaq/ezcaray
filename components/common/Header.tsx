@@ -92,7 +92,7 @@ const Header = () => {
           className="w-20 md:w-[120px] rounded-full"
         />
         <p>
-          <h1 className="text-brandColor ml-5 pt-3d">MYGT</h1>
+          <h1 className="text-brandColor ml-5 pt-3d text-4xl">MYGT</h1>
         </p>
       </div>
 
