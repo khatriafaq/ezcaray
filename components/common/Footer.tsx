@@ -10,7 +10,7 @@ const Footer = () => {
     {
       "name": "Twitter",
       "icon": Twitter,
-      "link": "https://www.twitter.com/virtualxuk"
+      "link": "https://www.twitter.com/"
     },
     {
       "name": "Facebook",
@@ -20,7 +20,7 @@ const Footer = () => {
     {
       "name": "Telegram",
       "icon": Telegram,
-      "link": "https://t.me/VirtualXuk"
+      "link": "https://t.me/"
     },
     {
       "name": "Github",
