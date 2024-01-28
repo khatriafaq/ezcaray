@@ -220,9 +220,9 @@ h3 {
   background: rgba(106, 58, 156, 1);
   background: linear-gradient(142deg,
       rgb(221, 217, 226) 27%,
-      rgba(106, 58, 156, 1) 50%,
-      rgba(78, 51, 99, 1) 77%,
-      rgb(145, 81, 241) 100%);
+      rgb(192, 156, 47) 50%,
+      rgba(234, 179, 8, 1) 77%,
+      rgb(211, 180, 88) 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
