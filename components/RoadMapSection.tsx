@@ -60,7 +60,7 @@ const RoadMapSection = () => {
   ]
   return (
     <section className='main-container mt-40' id='roadmap'>
-      <div className='max-w-[1440px] mx-auto roadmap-bg text-white'>
+      <div className='max-w-[1440px] mx-auto roadmap-bg text-orange-100'>
         <h1 className='text-center text-6xl md:text-8xl xl:text-[140px] gradient-text uppercase mb-20'>Roadmap</h1>
         <div className='md:flex justify-between items-start px-8 md:px-0'>
           <div className='hidden md:block'>
