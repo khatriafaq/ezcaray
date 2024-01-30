@@ -247,7 +247,7 @@ h3 {
 
 .number-container::before {
   content: "";
-  background: #d45cff;
+  background: #3B82F6;
   box-shadow: 0px 2px 8px black;
   position: absolute;
   border-radius: 100%;
@@ -258,7 +258,7 @@ h3 {
   content: "";
   height: 80px;
   background: transparent;
-  border-left: 2px dashed #d45cff;
+  border-left: 2px dashed #3B82F6;
   position: absolute;
   top: 2.5rem;
   z-index: -1;
@@ -275,7 +275,7 @@ h3 {
 }
 
 .roadmap-bg {
-  background: url("/logo-x-v2.png");
+  background: url("/mygt-rm.png");
   background-repeat: no-repeat;
   background-position: 50% 60%;
   background-size: 551px 551px;

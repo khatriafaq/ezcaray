@@ -83,9 +83,9 @@ export default function Home() {
 
       <AboutUsSection />
 
-      {/* <RoadMapSection />
+      <RoadMapSection />
 
-      <TeamSection />
+      {/* <TeamSection />
 
       <Faqs faqs={FaqsData} /> */}
     </main>

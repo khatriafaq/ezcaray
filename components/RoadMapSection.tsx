@@ -3,55 +3,55 @@ import React from 'react';
 const RoadMapSection = () => {
   const preLaunchData = [{
     no: 1,
-    title: "Research",
+    title: "1st quarter of 2024 - Research",
     desc: `Market Research, Goals, Vision & Mission.`,
     status: 'completed',
   }, {
     no: 2,
-    title: "Company",
-    desc: "Company Formation & Formal Team Assembly",
+    title: "1st quarter of 2024 - Company",
+    desc: "Company Formation",
     status: 'completed',
   }, {
     no: 3,
-    title: "Pre- Lauch Development",
+    title: "1st quarter of 2024 - Pre-Lauch Development",
     desc: "Smart Contract Development, Integration with BNB Smart Chain, Website Prototyping, Whitepaper Release",
     status: 'completed',
   }, {
     no: 4,
-    title: "ITO",
-    desc: "VRL Token Sale ( Seed, Public PreSale)",
-    status: 'running',
+    title: "1st quarter of 2024 - Launch of MYGT",
+    desc: "MYGT Token Sale",
+    status: 'upcoming',
   }, {
     no: 5,
-    title: "Exchange Listing ",
-    desc: "VRL Listing on CEX",
+    title: "2nd quarter of 2024 - Exchange Listing",
+    desc: "Wallet and exchang facilites",
     status: 'upcoming',
   }, {
     no: 6,
-    title: "Partnership ",
-    desc: "Partnership With One Of The UK's Biggest 5G Network",
+    title: "3rd quarter of 2024 - AI Integration and Testing",
+    desc: "Develop and implement the software connecting Mineral Global Yield AI with MYGOLD.",
   }]
 
   const postLaunchData = [{
     no: 7,
-    title: "Network Deployment",
-    desc: "VMobile Website & App Development, Crypto Wallet Integration, e-SIM Development, Integration & Testing, VMobile Physical SIM Production",
+    title: "Mining Expansion - Permit Approval",
+    desc: "Obtain permits for the expansion of mining operations into a 50 square kilometer area.",
   }, {
     no: 8,
-    title: "Marketing",
-    desc: "Nationwide Marketing Compaign",
+    title: "Expansion into South Africa",
+    desc: "Plan and initiate the expansion of operations into South Africa. Establish initial infrastructure and partnerships.",
   }, {
     no: 9,
-    title: "Network Launch",
-    desc: "VMobile UK's First Ever Blockchain Powered Mobile Phone Network Launches In Early 2024",
+    title: "Exploration of New Gold Fields",
+    desc: "Identify and explore new gold fields in Peru, Colombia, Chile, and Ecuador. Conduct feasibility studies and assessments.",
   }, {
     no: 10,
-    title: "EU Expansion",
-    desc: "Partnerships With Mobile Phone Networks Across Europe & County By Country Systematic Launch",
+    title: "Onboarding Preparation",
+    desc: "Prepare the framework for onboarding gold mining corporations and associates. Establish communication channels for collaboration.",
   }, {
     no: 11,
-    title: "USA & Canada Expansion",
-    desc: "Possibility Of Expansion to USA & Canada",
+    title: "Collaborative Agreements",
+    desc: "Establish collaborative agreements with mining entities. Define roles and responsibilities for the associates joining the MYGT group ",
   }, {
     no: 12,
     title: "Sky Is The Limit",
@@ -67,7 +67,7 @@ const RoadMapSection = () => {
             {preLaunchData.map((item, index) => {
               return (
                 <div className='mx-auto flex items-start gap-4 mt-4 max-w-[360px] h-[120px]' key={index}>
-                  <div className={`number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#25A0FF] after:border-l-[#25A0FF]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length && "number-after"}`} >{item.no}</div>
+                  <div className={`number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#EAB308] after:border-l-[#EAB308]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length && "number-after"}`} >{item.no}</div>
                   <div>
                     <h4 className='text-lg whitespace-nowrap'>{item.title}</h4>
                     <p className='text-dark2 min-h-[80px] leading-[20px]'>{item.desc}</p>
@@ -79,7 +79,7 @@ const RoadMapSection = () => {
             {preLaunchData.map((item, index) => {
               return (
                 <div className='mx-auto flex items-start gap-4 mt-4 max-w-[360px] h-[120px]' key={index}>
-                  <div className={`number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#25A0FF] after:border-l-[#25A0FF]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length + 1 && "number-after"}`} >{item.no}</div>
+                  <div className={`number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#EAB308] after:border-l-[#EAB308]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length + 1 && "number-after"}`} >{item.no}</div>
                   <div>
                     <h4 className='text-lg whitespace-nowrap'>{item.title}</h4>
                     <p className='text-dark2 min-h-[80px] leading-[20px]'>{item.desc}</p>
