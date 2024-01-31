@@ -71,7 +71,7 @@ const Footer = () => {
           <p className="font-normal text-dark2">SHAPING TOMORROW'S FINANCES, BACKED BY THE TIMELESS VALUE
             <br /> OF GOLD. POWERED BY CRYPTOCURRENCIES,
             <br /> BLOCKCHAIN TECHNOLOGY &
-            <br /> ARTIFICAL INTELLEGANCE. </p>
+            <br /> ARTIFICAL INTELLEGENCE. </p>
           <div className="flex mt-[48px]">
             {SocialLink.map((data, index) => (
               <div key={index}>

@@ -4,12 +4,9 @@ import AvaMiddleton from "~/ourTeamImages/avaMiddleton.svg";
 import DeclanHooper from "~/ourTeamImages/declanHooper.svg";
 import KasonEspinosa from "~/ourTeamImages/kasonEspinosa.svg";
 import LaurenBrowne from "~/ourTeamImages/laurenBrowne.svg";
-import MattTipper from "~/ourTeamImages/mattTipper.svg";
-import MattTomson from "~/ourTeamImages/mattTomson.svg";
 import RobertPerry from "~/ourTeamImages/robertPerry.svg";
 import TammyLam from "~/ourTeamImages/tammyLam.svg";
 import TylerOsborne from "~/ourTeamImages/tylerOsborne.svg";
-import WilliamHaines from "~/ourTeamImages/williamHaines.svg";
 import MWaqas from "~/ourTeamImages/mWaqas.svg";
 import AfsheenJaffary from "~/ourTeamImages/afsheenJafry.svg"
 import RecceWalker from "~/ourTeamImages/reeceWalker.svg"

@@ -99,8 +99,10 @@ const Header = () => {
       {/* mobile menu button */}
       <div className="block lg:hidden">
         <button
-          className="text-white"
+          className="text-orange-100"
+          
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          
         >
           {isMobileMenuOpen ? (
             <svg
@@ -170,7 +172,7 @@ const Header = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
-          className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48  bg-dark transition-all rounded-[42px] fade-right`}
+          className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
         >
           <div className="flex flex-col mx-auto gap-3 w-[200px]">
             <WagmiConfig config={wagmiConfig}>
@@ -178,25 +180,21 @@ const Header = () => {
                 chains={chains}
                 appInfo={VirtualXInfo}
                 modalSize="compact"
+                theme={darkTheme({
+                  accentColor: "#EAB308",
+                  borderRadius: "large",
+                })}
+                
               >
                 <div>
                   <ConnectButton />
                 </div>
               </RainbowKitProvider>
             </WagmiConfig>
-            )
             <PrimaryBtn download={true} text="Whitepaper" />
+            <PrimaryBtn download={true} text="Contact" />
             {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
-            <input
-              value={tokensToSend}
-              type="number"
-              style={{ WebkitAppearance: "none" }}
-              className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
-              placeholder="BNB's To Invest"
-              onChange={(e) => {
-                setTokensToSend(e.target.value);
-              }}
-            />
+            
           </div>
         </div>
       )}

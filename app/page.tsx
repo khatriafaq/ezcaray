@@ -26,7 +26,7 @@ export default function Home() {
             </h1>
           </div>
           <h1 className="text-[44.89px] -tracking-[2.469px] leading-[105%] md:text-[85px] xl:tracking-normal xl:text-[65px] xxl:text-[90px] xxl:tracking-[-1.934px] xl:whitespace-nowrap hero-text">
-            by raw<span className="text-dark2"></span>{" "}
+            by<span className="text-dark2"></span>{" "}
             <span className="text-brandColor">GOLD</span> <br />
             <span> Secured in Vault</span>
           </h1>
@@ -36,12 +36,12 @@ export default function Home() {
           <p className="sub-title-large xl:pb-2 xxl:pb-20">
             Shaping Tomorrow's Finances, Backed by the Timeless Value of Gold.
             powered by cryptocurrencies,
-            <br /> blockchain technology &<br /> artifical intellegance.
+            <br /> blockchain technology &<br /> artifical intellegence.
           </p>
         </div>
 
         {/* phone image container*/}
-        <div className="w-full xl:flex items-end xl:left-[127px] xxl:left-[112px] relative z-10 pt-12 -ml-6 mb-10 md:-ml-14 xl:-ml-0 xl:-mt-20 xl:pt-2 xl:-mb-[4rem] xl:-mr-2 xxl:-mt-24 xxl:mb-[3rem] xxl:-mr-10">
+        <div className="w-[340px] md:w-full xl:flex items-end xl:left-[127px] xxl:left-[112px] relative z-10 pt-12 -ml-6 mb-10 md:-ml-14 xl:-ml-0 xl:-mt-20 xl:pt-2 xl:-mb-[4rem] xl:-mr-2 xxl:-mt-24 xxl:mb-[3rem] xxl:-mr-10">
           <Image
             src={Phone}
             alt="phone"
@@ -56,7 +56,7 @@ export default function Home() {
           <Image
             src={PhoneDisply}
             alt="phoneDisply"
-            className="h-[700px] w-[800px] rounded-xl"
+            className="h-[350px] md:h-[700px] md:w-[800px] rounded-xl"
           />
         </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
           <div className="xl:text-4xl text-2xl font-bold xxl:text-6xl">
             <span className="text-brandColor">MYGOLD TOKEN</span> <br />{" "}
             <p className="text-orange-100 pt">
-              Your Currency, Anchored in Precious Trust
+              Your Asset, Anchored in Precious Trust
             </p>
           </div>
           <p className="text-dark2 font-bold xxl:text-2xl my-6 pr-10">
@@ -85,9 +85,9 @@ export default function Home() {
 
       <RoadMapSection />
 
-      {/* <TeamSection />
+      <TeamSection />
 
-      <Faqs faqs={FaqsData} /> */}
+      {/* <Faqs faqs={FaqsData} /> */}
     </main>
   );
 }

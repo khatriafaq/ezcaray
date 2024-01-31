@@ -3,17 +3,17 @@ import React from 'react';
 const RoadMapSection = () => {
   const preLaunchData = [{
     no: 1,
-    title: "1st quarter of 2024 - Research",
+    title: "Research",
     desc: `Market Research, Goals, Vision & Mission.`,
     status: 'completed',
   }, {
     no: 2,
-    title: "1st quarter of 2024 - Company",
-    desc: "Company Formation",
+    title: "Corporate Parent",
+    desc: "Ezcaray Mining UK",
     status: 'completed',
   }, {
     no: 3,
-    title: "1st quarter of 2024 - Pre-Lauch Development",
+    title: "Pre-Lauch Development",
     desc: "Smart Contract Development, Integration with BNB Smart Chain, Website Prototyping, Whitepaper Release",
     status: 'completed',
   }, {
@@ -59,15 +59,15 @@ const RoadMapSection = () => {
   }
   ]
   return (
-    <section className='main-container mt-40' id='roadmap'>
+    <section className='main-container mt-10' id='roadmap'>
       <div className='max-w-[1440px] mx-auto roadmap-bg text-orange-100'>
-        <h1 className='text-center text-6xl md:text-8xl xl:text-[140px] gradient-text uppercase mb-20'>Roadmap</h1>
+        <h1 className='text-center text-6xl md:text-8xl xl:text-[140px] gradient-text uppercase mb-10'>Roadmap</h1>
         <div className='md:flex justify-between items-start px-8 md:px-0'>
           <div className='hidden md:block'>
             {preLaunchData.map((item, index) => {
               return (
                 <div className='mx-auto flex items-start gap-4 mt-4 max-w-[360px] h-[120px]' key={index}>
-                  <div className={`number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#EAB308] after:border-l-[#EAB308]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length && "number-after"}`} >{item.no}</div>
+                  <div className={`text-wrap number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#EAB308] after:border-l-[#EAB308]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length && "number-after"}`} >{item.no}</div>
                   <div>
                     <h4 className='text-lg whitespace-nowrap'>{item.title}</h4>
                     <p className='text-dark2 min-h-[80px] leading-[20px]'>{item.desc}</p>
@@ -81,8 +81,8 @@ const RoadMapSection = () => {
                 <div className='mx-auto flex items-start gap-4 mt-4 max-w-[360px] h-[120px]' key={index}>
                   <div className={`number-container before:w-10 before:h-10 text-black ${item.status === 'completed' && "before:bg-[#EAB308] after:border-l-[#EAB308]"} ${item.status === 'running' && "before:w-14 before:h-14"} ${item.no !== preLaunchData.length + 1 && "number-after"}`} >{item.no}</div>
                   <div>
-                    <h4 className='text-lg whitespace-nowrap'>{item.title}</h4>
-                    <p className='text-dark2 min-h-[80px] leading-[20px]'>{item.desc}</p>
+                    <h4 className='text-lg text-wrap'>{item.title}</h4>
+                    <p className='text-dark2 min-h-[80px] leading-[20px] text-wrap'>{item.desc}</p>
                   </div>
                 </div>)
             })}
@@ -93,8 +93,8 @@ const RoadMapSection = () => {
                 <div className={`mx-auto flex items-start gap-4 mt-4 max-w-[360px] h-[120px] ${item.no === 7 && 'h-[140px] md:h-[120px]'}`} key={index}>
                   <div className={`number-container before:w-10 before:h-10 text-black ${index !== preLaunchData.length - 1 && "number-after"} ${item.no === 10 && "right-1"} ${item.no === 7 && 'after:h-[100px] md:after:h-[80px]'}`}>{item.no === 6 && <span className='block md:hidden connecter-line'></span>}{item.no}</div>
                   <div className={`${item.no > 9 && '-ml-2'}`}>
-                    <h4 className='text-lg whitespace-nowrap'>{item.title}</h4>
-                    <p className='text-dark2 min-h-[80px] leading-[20px] md:leading-6'>{item.desc}</p>
+                    <h4 className='text-lg text-wrap'>{item.title}</h4>
+                    <p className='text-dark2 min-h-[80px] leading-[20px] md:leading-6 text-wrap'>{item.desc}</p>
                   </div>
                 </div>)
             })}
