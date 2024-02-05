@@ -9,8 +9,9 @@ import RoadMapSection from "@/components/RoadMapSection";
 
 export default function Home() {
   return (
+    
     <main className="overflow-x-hidden">
-      <section className="main-container mb-0 xl:flex xxl:items-start justify-between text-orange-100">
+      <section className="main-container mb-0 xl:flex xxl:items-start justify-between text-orange-100" id="hero">
         {/* hero text container */}
         <div className=" text-center lg:text-left xl:pt-10">
           <div>
@@ -87,7 +88,7 @@ export default function Home() {
 
       <TeamSection />
 
-      {/* <Faqs faqs={FaqsData} /> */}
+      <Faqs faqs={FaqsData} />
     </main>
   );
 }

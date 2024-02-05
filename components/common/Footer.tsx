@@ -15,7 +15,7 @@ const Footer = () => {
     {
       "name": "Facebook",
       "icon": FB,
-      "link": "#"
+      "link": "https://www.facebook.com/"
     },
     {
       "name": "Telegram",
@@ -25,7 +25,7 @@ const Footer = () => {
     {
       "name": "Github",
       "icon": Git,
-      "link": "#"
+      "link": "https://www.github.com/"
     }
   ]
 
@@ -35,12 +35,12 @@ const Footer = () => {
       "link": "/#about"
     },
     {
-      "name": "Team",
-      "link": "/#team"
+      "name": "Features",
+      "link": "/#hero"
     },
     {
-      "name": "Features",
-      "link": "/#"
+      "name": "Partners",
+      "link": "/#partner"
     },
     {
       "name": "Road map",
@@ -75,7 +75,7 @@ const Footer = () => {
           <div className="flex mt-[48px]">
             {SocialLink.map((data, index) => (
               <div key={index}>
-                <div className="bg-dark2 hover:bg-brandColor hover:border border-white mr-4 h-[28px] w-[28px] rounded-full flex items-center justify-center">
+                <div className="bg-dark2 hover:bg-brandColor hover:border border-white mr-4 h-[28px] w-[28px] rounded-full flex items-center justify-center grayscale">
                   <a href={data.link} target="_blank"><Image src={data.icon} alt={data.name} /></a>
                 </div>
               </div>

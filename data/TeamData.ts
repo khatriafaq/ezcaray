@@ -1,75 +1,25 @@
-import AlexFarrow from "~/ourTeamImages/alexFarrow.svg";
-import AnthonyMiller from "~/ourTeamImages/anthonyMiller.svg";
-import AvaMiddleton from "~/ourTeamImages/avaMiddleton.svg";
-import DeclanHooper from "~/ourTeamImages/declanHooper.svg";
-import KasonEspinosa from "~/ourTeamImages/kasonEspinosa.svg";
-import LaurenBrowne from "~/ourTeamImages/laurenBrowne.svg";
-import RobertPerry from "~/ourTeamImages/robertPerry.svg";
-import TammyLam from "~/ourTeamImages/tammyLam.svg";
-import TylerOsborne from "~/ourTeamImages/tylerOsborne.svg";
-import MWaqas from "~/ourTeamImages/mWaqas.svg";
-import AfsheenJaffary from "~/ourTeamImages/afsheenJafry.svg"
-import RecceWalker from "~/ourTeamImages/reeceWalker.svg"
+import Mista from "~/ourTeamImages/mista.jpeg"
+import One from "~/ourTeamImages/one.jpeg"
+import Ezcaray from "~/ourTeamImages/ezcaray.jpeg"
 
 export const OurTeam = [
     {
-        photo: MWaqas,
-        name: "M Waqas",
-        title: "Founder and CEO",
+        photo: Ezcaray,
+        name: "Ezcaray Mining",
+        title: "Mining Corporation",
+        link: "https://www.ezcaraymining.uk"
     },
     {
-        photo: AfsheenJaffary,
-        name: " Afsheen Jafry",
-        title: "Co-Founder",
+        photo: Mista,
+        name: "Mista",
+        title: "Builder and Architect",
+        link: "https://www.mista.one"
     },
     {
-        photo: LaurenBrowne,
-        name: "Lauren Browne",
-        title: "Head of Reserach",
+        photo: One,
+        name: "One",
+        title: "Partner",
+        link: "https://www.weareone.one"
     },
-    {
-        photo: TylerOsborne,
-        name: " Tyler Osborne",
-        title: "Lead Project Manager",
-    },
-    {
-        photo: TammyLam,
-        name: "Tammy Lam",
-        title: "Brand Manager",
-    },
-    {
-        photo: KasonEspinosa,
-        name: "Kason Espinosa",
-        title: "Head of Communications",
-    },
-    {
-        photo: RobertPerry,
-        name: "Robert Perry",
-        title: "Software Engineer",
-    },
-    {
-        photo: AlexFarrow,
-        name: "Alex Farrow",
-        title: "Communication Manager",
-    },
-    {
-        photo: DeclanHooper,
-        name: "Declan Hooper",
-        title: "Head of PR",
-    },
-    {
-        photo: RecceWalker,
-        name: "Reece Walker",
-        title: "Head of Finance",
-    },
-    {
-        photo: AvaMiddleton,
-        name: "Ava Middleton",
-        title: "Head of Marketing",
-    },
-    {
-        photo: AnthonyMiller,
-        name: "Anthony Miller",
-        title: "Tech Lead",
-    }
+    
 ];

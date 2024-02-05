@@ -5,6 +5,7 @@ import Logo from "../../public/images/AgaGoldy-logo-primary.jpeg";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
 import Data from "./config.json";
+import Ezcaray from "../../public/ezcaray.jpeg";
 
 import {
   getDefaultWallets,
@@ -83,122 +84,128 @@ const Header = () => {
   });
 
   return (
-    <header className="main-container bg-dark flex justify-between items-center rounded-[38px] mt-10 py-[13px] px-[28px] relative z-20">
-      {/* logo */}
-      <div className="logo flex items-center">
-        <Image
-          src={Logo}
-          alt="logo"
-          className="w-20 md:w-[120px] rounded-full"
-        />
-        <p>
-          <h1 className="text-brandColor ml-5 pt-3d text-4xl">MYGT</h1>
-        </p>
-      </div>
+    <div>
+      <header className="main-container bg-dark flex justify-between items-center rounded-[38px] mt-10 py-[13px] px-[28px] relative z-20">
+        {/* logo */}
+        <div className="logo flex items-center">
+          <Image
+            src={Logo}
+            alt="logo"
+            className="w-20 md:w-[120px] rounded-full"
+          />
+          <p>
+            <h1 className="text-brandColor ml-5 pt-3d text-4xl">MYGT</h1>
+          </p>
+        </div>
 
-      {/* mobile menu button */}
-      <div className="block lg:hidden">
-        <button
-          className="text-orange-100"
-          
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          
-        >
-          {isMobileMenuOpen ? (
-            <svg
-              className="rotate-90 transition-all w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          ) : (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16m-7 6h7"
-              />
-            </svg>
-          )}
-        </button>
-      </div>
-
-      {/* Desktop Menu */}
-      <div className="hidden lg:flex space-x-4">
-        <WagmiConfig config={wagmiConfig}>
-          <RainbowKitProvider
-            chains={chains}
-            appInfo={VirtualXInfo}
-            modalSize="compact"
-            theme={darkTheme({
-              accentColor: "#EAB308",
-              borderRadius: "large",
-            })}
+        {/* mobile menu button */}
+        <div className="block lg:hidden">
+          <button
+            className="text-orange-100"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <div>
-              <ConnectButton />
-            </div>
-          </RainbowKitProvider>
-        </WagmiConfig>
+            {isMobileMenuOpen ? (
+              <svg
+                className="rotate-90 transition-all w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
 
-        <PrimaryBtn download={true} text="Whitepaper" />
-        <PrimaryBtn
-          action={() => {
-            sendTransaction();
-            setTokensToSend("");
-          }}
-          text="Contact"
-        />
-        {/* <input value={tokensToSend} type="number" style={{WebkitAppearance : "none"}} className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink" placeholder="BNB's To Invest" onChange={(e) => {
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex space-x-4">
+          <WagmiConfig config={wagmiConfig}>
+            <RainbowKitProvider
+              chains={chains}
+              appInfo={VirtualXInfo}
+              modalSize="compact"
+              theme={darkTheme({
+                accentColor: "#EAB308",
+                borderRadius: "large",
+              })}
+            >
+              <div>
+                <ConnectButton />
+              </div>
+            </RainbowKitProvider>
+          </WagmiConfig>
+
+          <PrimaryBtn download={true} text="Whitepaper" />
+          <PrimaryBtn
+            action={() => {
+              sendTransaction();
+              setTokensToSend("");
+            }}
+            text="Contact"
+          />
+          {/* <input value={tokensToSend} type="number" style={{WebkitAppearance : "none"}} className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink" placeholder="BNB's To Invest" onChange={(e) => {
           setTokensToSend(e.target.value)
         }}/> */}
-      </div>
-
-      {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div
-          className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
-        >
-          <div className="flex flex-col mx-auto gap-3 w-[200px]">
-            <WagmiConfig config={wagmiConfig}>
-              <RainbowKitProvider
-                chains={chains}
-                appInfo={VirtualXInfo}
-                modalSize="compact"
-                theme={darkTheme({
-                  accentColor: "#EAB308",
-                  borderRadius: "large",
-                })}
-                
-              >
-                <div>
-                  <ConnectButton />
-                </div>
-              </RainbowKitProvider>
-            </WagmiConfig>
-            <PrimaryBtn download={true} text="Whitepaper" />
-            <PrimaryBtn download={true} text="Contact" />
-            {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
-            
-          </div>
         </div>
-      )}
-    </header>
+
+        {/* Mobile Menu */}
+        {isMobileMenuOpen && (
+          <div
+            className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
+          >
+            <div className="flex flex-col mx-auto gap-3 w-[200px]">
+              <WagmiConfig config={wagmiConfig}>
+                <RainbowKitProvider
+                  chains={chains}
+                  appInfo={VirtualXInfo}
+                  modalSize="compact"
+                  theme={darkTheme({
+                    accentColor: "#EAB308",
+                    borderRadius: "large",
+                  })}
+                >
+                  <div>
+                    <ConnectButton />
+                  </div>
+                </RainbowKitProvider>
+              </WagmiConfig>
+              <PrimaryBtn download={true} text="Whitepaper" />
+              <PrimaryBtn download={true} text="Contact" />
+              {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
+            </div>
+          </div>
+        )}
+      </header>
+      <div className="p-6 md:p-12 m-0">
+        {/* Picture above the header */}
+        <Image
+          src={Ezcaray}
+          alt="ezcaray-pic"
+          className="w-full rounded-xl" // Adjust the width as needed
+        />
+      </div>
+    </div>
   );
 };
 

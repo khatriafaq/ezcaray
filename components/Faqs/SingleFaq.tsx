@@ -18,7 +18,7 @@ const SingleFaq = ({ faq, isOpen, toggleFaq }: SingleFaqProps) => {
   return (
     <div className="border border-[#1A1A1A] mb-3 overflow-hidden rounded-lg transition-all ">
       <div
-        className="flex justify-between items-center bg-[#1A1A1A] bg-gradient-to-r hover:from-purple-600 hover:to-fuchsia-500 px-3 py-2 cursor-pointer text-white"
+        className="flex justify-between items-center bg-[#1A1A1A] bg-gradient-to-r hover:from-yellow-600 hover:to-orange-300 px-3 py-2 cursor-pointer text-white"
         onClick={toggleFaq}
       >
         <h3 className="text-base md:text-xl">{faq.queNo}. {faq.question}</h3>

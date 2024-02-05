@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SingleFaq from "./SingleFaq";
 import faqimg from "../../public/FAQ.svg";
 import Image from "next/image";
+import faqimage from "../../public/FAQ.jpg"
 
 interface Faq {
   queNo: number;
@@ -34,8 +35,11 @@ const Faqs = ({ faqs }: FaqsProps) => {
           />
         ))}
       </div>
-      <div className="md:flex ml-24 pt-12 justify-center hidden">
-        <Image src={faqimg} alt="faqImage" />
+      <div className="md:flex md:ml-24 md:pt-16 md:justify-center hidden">
+        <Image src={faqimage} alt="faqImage" 
+        className=" h-[580px] w-[550px] rounded-2xl"
+        />
+
       </div>
     </section>
   );
