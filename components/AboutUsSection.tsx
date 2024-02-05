@@ -8,7 +8,7 @@ const AboutUsSection = () => {
     <>
       {/* new started */}
       <div className="main-container" id="about">
-        <div className="text-white rounded-[57px] mt-10 relative">                                                                                                                                                                                                                                                                                                ">
+        <div className="text-white rounded-[57px] mt-10 relative border-white">
           <div className="grid grid-cols-12 mt-5 gap-8">
             <div className=" col-span-12 xl:col-span-7 xxl:col-span-6 ">
               <div className=" p-6 sm:p-14 xxl:p-20 ">
