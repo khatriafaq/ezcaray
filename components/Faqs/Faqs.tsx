@@ -39,7 +39,7 @@ const Faqs = ({ faqs }: FaqsProps) => {
         <Image
           src={faqimage}
           alt="faqImage"
-          className=" h-[580px] w-[550px] rounded-2xl"
+          className=" h-[460px] w-[450px] rounded-2xl"
         />
       </div>
     </section>

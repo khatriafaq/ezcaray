@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/images/AgaGoldy-logo-primary.jpeg";
+import Logo from "../../public/images/AgaGoldy-logo-primary-logo.jpeg";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
 import Data from "./config.json";
@@ -91,7 +91,7 @@ const Header = () => {
           <Image
             src={Logo}
             alt="logo"
-            className="w-20 md:w-[120px] rounded-full"
+            className="w-20 md:w-[200px] rounded-full"
           />
           <p>
             <h1 className="text-brandColor ml-5 pt-3d text-4xl">MYGT</h1>
@@ -162,11 +162,18 @@ const Header = () => {
               sendTransaction();
               setTokensToSend("");
             }}
-            text="Contact"
+            text="Buy MYGT"
           />
-          {/* <input value={tokensToSend} type="number" style={{WebkitAppearance : "none"}} className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-3xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink" placeholder="BNB's To Invest" onChange={(e) => {
-          setTokensToSend(e.target.value)
-        }}/> */}
+          <input
+            value={tokensToSend}
+            type="number"
+            style={{ WebkitAppearance: "none" }}
+            className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
+            placeholder="ETH's To Invest"
+            onChange={(e) => {
+              setTokensToSend(e.target.value);
+            }}
+          />
         </div>
 
         {/* Mobile Menu */}
@@ -192,19 +199,17 @@ const Header = () => {
               </WagmiConfig>
               <PrimaryBtn download={true} text="Whitepaper" />
               <PrimaryBtn download={true} text="Contact" />
-              {/* <PrimaryBtn action={() => {sendTransaction(); setTokensToSend("")}} text="Buy Presale" /> */}
+              <PrimaryBtn
+                action={() => {
+                  sendTransaction();
+                  setTokensToSend("");
+                }}
+                text="Buy MYGT"
+              />
             </div>
           </div>
         )}
       </header>
-      <div className="p-6 md:p-12 m-0">
-        {/* Picture above the header */}
-        <Image
-          src={Ezcaray}
-          alt="ezcaray-pic"
-          className="w-full rounded-xl" // Adjust the width as needed
-        />
-      </div>
     </div>
   );
 };
