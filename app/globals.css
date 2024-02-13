@@ -12,8 +12,8 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
-input[type='number'] {
-  -moz-appearance:textfield;
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 input::-webkit-outer-spin-button,
@@ -75,7 +75,12 @@ h3 {
   font-weight: 700;
   padding: 10px 30px;
   border-radius: 12px;
-  background: linear-gradient(158deg, rgb(2, 6, 122) 10%, rgb(1, 2, 56) 38.55%, rgba(74, 71, 255, 0.822) 100%);
+  background: linear-gradient(
+    158deg,
+    rgb(2, 6, 122) 10%,
+    rgb(1, 2, 56) 38.55%,
+    rgba(74, 71, 255, 0.822) 100%
+  );
 }
 
 .logo {
@@ -129,11 +134,13 @@ h3 {
 
 .radient-bg {
   background: rgb(48, 46, 51);
-  background: linear-gradient(142deg,
-      rgba(48, 46, 51, 1) 27%,
-      rgba(106, 58, 156, 1) 50%,
-      rgba(78, 51, 99, 1) 77%,
-      rgba(48, 46, 51, 1) 100%);
+  background: linear-gradient(
+    142deg,
+    rgba(48, 46, 51, 1) 27%,
+    rgba(106, 58, 156, 1) 50%,
+    rgba(78, 51, 99, 1) 77%,
+    rgba(48, 46, 51, 1) 100%
+  );
 }
 
 .time-divider::after {
@@ -150,7 +157,6 @@ h3 {
 }
 
 @media screen and (min-width: 768px) {
-
   .clock-wrapper::before,
   .extra-cercles,
   .extra-cercles::after,
@@ -218,11 +224,13 @@ h3 {
 /* roadmap section */
 .gradient-text {
   background: rgba(106, 58, 156, 1);
-  background: linear-gradient(142deg,
-      rgb(221, 217, 226) 27%,
-      rgb(192, 156, 47) 50%,
-      rgba(234, 179, 8, 1) 77%,
-      rgb(211, 180, 88) 100%);
+  background: linear-gradient(
+    142deg,
+    rgb(221, 217, 226) 27%,
+    rgb(192, 156, 47) 50%,
+    rgba(234, 179, 8, 1) 77%,
+    rgb(211, 180, 88) 100%
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -247,7 +255,7 @@ h3 {
 
 .number-container::before {
   content: "";
-  background: #3B82F6;
+  background: #3b82f6;
   box-shadow: 0px 2px 8px black;
   position: absolute;
   border-radius: 100%;
@@ -258,7 +266,7 @@ h3 {
   content: "";
   height: 80px;
   background: transparent;
-  border-left: 2px dashed #3B82F6;
+  border-left: 2px dashed #3b82f6;
   position: absolute;
   top: 2.5rem;
   z-index: -1;
@@ -278,7 +286,7 @@ h3 {
   background: url("/mygt-rm.png");
   background-repeat: no-repeat;
   background-position: 50% 60%;
-  background-size: 551px 551px;
+  background-size: 1000px 551px;
 }
 
 @media screen and (max-width: 1160px) {
@@ -411,7 +419,6 @@ h3 {
 }
 
 @media screen and (max-width: 1200px) {
-
   .privacy-container,
   .terms-container {
     margin: 1rem;
@@ -419,7 +426,6 @@ h3 {
 }
 
 @media screen and (max-width: 600px) {
-
   .privacy-container,
   .terms-container {
     margin: 1rem;

@@ -1,11 +1,10 @@
 "use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import Logo from "../../public/images/AgaGoldy-logo-primary-logo.jpeg";
+import Logo from "../../public/images/Ezcaray-primary-logo.png";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
 import Data from "./config.json";
-import Ezcaray from "../../public/ezcaray.jpeg";
 
 import {
   getDefaultWallets,
@@ -91,10 +90,10 @@ const Header = () => {
           <Image
             src={Logo}
             alt="logo"
-            className="w-20 md:w-[200px] rounded-full"
+            className="w-20 md:w-[180px] rounded-full"
           />
           <p>
-            <h1 className="text-brandColor ml-5 pt-3d text-4xl">MYGT</h1>
+            <h1 className="text-brandColor pt-3d text-4xl m-5">MYGT</h1>
           </p>
         </div>
 
