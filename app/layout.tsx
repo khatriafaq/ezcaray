@@ -24,13 +24,13 @@ import {
 } from "@rainbow-me/rainbowkit/wallets";
 
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { bscTestnet, bsc } from "wagmi/chains";
+import { bscTestnet, bsc, goerli } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const projectId = "29ab18948d1248fd1133bbd91abcc8cf";
 
-const { chains, publicClient } = configureChains([bsc], [publicProvider()]);
+const { chains, publicClient } = configureChains([goerli], [publicProvider()]);
 const { wallets } = getDefaultWallets({
   appName: "Virtual X",
   projectId,
