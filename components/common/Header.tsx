@@ -9,7 +9,7 @@ import Data from "./config.json";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { useAccount, useSendTransaction, WagmiProvider } from "wagmi";
-import { mainnet, polygon, optimism, arbitrum, base, zora } from "wagmi/chains";
+import { mainnet, polygon, optimism, arbitrum, base, zora, goerli } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { parseEther } from "viem";
 const projectId = "55727967a0e4b5b82d166a5c2e179651";
@@ -18,7 +18,7 @@ const Header = () => {
   const config = getDefaultConfig({
     appName: "MYGT",
     projectId: projectId,
-    chains: [mainnet, polygon, optimism, arbitrum, base, zora],
+    chains: [mainnet, polygon, optimism, arbitrum, base, zora, goerli],
     ssr: true, // If your dApp uses server side rendering (SSR)
   });
   const { contractAddress, ABI } = Data;
