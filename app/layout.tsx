@@ -8,7 +8,15 @@ import CountdownClock from "@/components/CountdownClock";
 import "@rainbow-me/rainbowkit/styles.css";
 import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
 import { useState } from "react";
-import { mainnet, polygon, optimism, arbitrum, base, zora, goerli } from "viem/chains";
+import {
+  mainnet,
+  polygon,
+  optimism,
+  arbitrum,
+  base,
+  zora,
+  goerli,
+} from "viem/chains";
 import { useSendTransaction, WagmiProvider } from "wagmi";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
@@ -25,17 +33,17 @@ const btnFont = Source_Sans_3({
   variable: "--font-source-sans-3",
 });
 
+const config = getDefaultConfig({
+  appName: "MYGT",
+  projectId: projectId,
+  chains: [mainnet, polygon, optimism, arbitrum, base, zora, goerli],
+  ssr: true, // If your dApp uses server side rendering (SSR)
+});
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const config = getDefaultConfig({
-    appName: "MYGT",
-    projectId: projectId,
-    chains: [mainnet, polygon, optimism, arbitrum, base, zora, goerli],
-    ssr: true, // If your dApp uses server side rendering (SSR)
-  });
   const queryClient = new QueryClient();
 
   return (
