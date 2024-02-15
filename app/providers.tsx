@@ -21,7 +21,7 @@ import { bscTestnet, bsc } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 
-const projectId = "da2ffc3f8eb0b295ff1ec21d73e08f8a";
+const projectId = "29ab18948d1248fd1133bbd91abcc8cf";
 
 const { chains, publicClient } = configureChains(
   [bsc, bscTestnet],
