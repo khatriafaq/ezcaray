@@ -6,81 +6,28 @@ import PrimaryBtn from "../ui/PrimaryBtn";
 import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
 import Data from "./config.json";
 
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  connectorsForWallets,
-} from "@rainbow-me/rainbowkit";
-import {
-  argentWallet,
-  trustWallet,
-  ledgerWallet,
-} from "@rainbow-me/rainbowkit/wallets";
-import {
-  injectedWallet,
-  rainbowWallet,
-  walletConnectWallet,
-} from "@rainbow-me/rainbowkit/wallets";
-
-import {
-  configureChains,
-  createConfig,
-  useAccount,
-  useContractWrite,
-  usePrepareSendTransaction,
-  useSendTransaction,
-  WagmiConfig,
-} from "wagmi";
-import { bscTestnet, bsc, polygonMumbai, goerli } from "wagmi/chains";
-import { publicProvider } from "wagmi/providers/public";
+import "@rainbow-me/rainbowkit/styles.css";
+import { getDefaultConfig, RainbowKitProvider } from "@rainbow-me/rainbowkit";
+import { useAccount, useSendTransaction, WagmiProvider } from "wagmi";
+import { mainnet, polygon, optimism, arbitrum, base, zora } from "wagmi/chains";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { parseEther } from "viem";
+const projectId = "55727967a0e4b5b82d166a5c2e179651";
 
-const projectId = "29ab18948d1248fd1133bbd91abcc8cf";
-
-const { chains, publicClient } = configureChains([goerli], [publicProvider()]);
-const { wallets } = getDefaultWallets({
-  appName: "Ezcaray",
-  projectId,
-  chains,
-});
-
-const VirtualXInfo = {
-  appName: "Virtual X",
-};
-const connectors = connectorsForWallets([
-  ...wallets,
-  {
-    groupName: "Recommended",
-    wallets: [
-      injectedWallet({ chains }),
-      rainbowWallet({ projectId, chains }),
-      walletConnectWallet({ projectId, chains }),
-    ],
-  },
-]);
-const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-});
 const Header = () => {
+  const config = getDefaultConfig({
+    appName: "MYGT",
+    projectId: projectId,
+    chains: [mainnet, polygon, optimism, arbitrum, base, zora],
+    ssr: true, // If your dApp uses server side rendering (SSR)
+  });
   const { contractAddress, ABI } = Data;
   const { address, isConnecting, isDisconnected } = useAccount();
+  const queryClient = new QueryClient();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const Address = address;
   const [tokensToSend, setTokensToSend] = useState<string>("");
-
-  const { data, isLoading, isSuccess, sendTransaction } = useSendTransaction({
-    to: Data.contractAddress,
-    value: parseEther(tokensToSend),
-  });
-
-  const wagmiConfig = createConfig({
-    autoConnect: true,
-    connectors,
-    publicClient,
-  });
+  const { sendTransaction } = useSendTransaction();
 
   return (
     <div>
@@ -139,26 +86,21 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-4">
-          <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider
-              chains={chains}
-              appInfo={VirtualXInfo}
-              modalSize="compact"
-              theme={darkTheme({
-                accentColor: "#EAB308",
-                borderRadius: "large",
-              })}
-            >
-              <div>
+          <WagmiProvider config={config}>
+            <QueryClientProvider client={queryClient}>
+              <RainbowKitProvider>
                 <ConnectButton />
-              </div>
-            </RainbowKitProvider>
-          </WagmiConfig>
+              </RainbowKitProvider>
+            </QueryClientProvider>
+          </WagmiProvider>
 
           <PrimaryBtn download={true} text="Whitepaper" />
           <PrimaryBtn
             action={() => {
-              sendTransaction();
+              sendTransaction({
+                to: "0x80f7DD9Ead863717ab35B3ece178FAA21A41053F",
+                value: parseEther(tokensToSend),
+              });
               setTokensToSend("");
             }}
             text="Buy MYGT"
@@ -181,26 +123,22 @@ const Header = () => {
             className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
           >
             <div className="flex flex-col mx-auto gap-3 w-[200px]">
-              <WagmiConfig config={wagmiConfig}>
-                <RainbowKitProvider
-                  chains={chains}
-                  appInfo={VirtualXInfo}
-                  modalSize="compact"
-                  theme={darkTheme({
-                    accentColor: "#EAB308",
-                    borderRadius: "large",
-                  })}
-                >
-                  <div>
+              <WagmiProvider config={config}>
+                <QueryClientProvider client={queryClient}>
+                  <RainbowKitProvider>
                     <ConnectButton />
-                  </div>
-                </RainbowKitProvider>
-              </WagmiConfig>
+                  </RainbowKitProvider>
+                </QueryClientProvider>
+              </WagmiProvider>
+
               <PrimaryBtn download={true} text="Whitepaper" />
               <PrimaryBtn download={true} text="Contact" />
               <PrimaryBtn
                 action={() => {
-                  sendTransaction();
+                  sendTransaction({
+                    to: "0x80f7DD9Ead863717ab35B3ece178FAA21A41053F",
+                    value: parseEther(tokensToSend),
+                  });
                   setTokensToSend("");
                 }}
                 text="Buy MYGT"

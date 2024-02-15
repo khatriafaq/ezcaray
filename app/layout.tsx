@@ -5,57 +5,15 @@ import type { Metadata } from "next";
 import Footer from "@/components/common/Footer";
 import { Source_Sans_3, Space_Grotesk } from "next/font/google";
 import CountdownClock from "@/components/CountdownClock";
-import Providers from "./providers";
 import "@rainbow-me/rainbowkit/styles.css";
-import {
-  getDefaultWallets,
-  RainbowKitProvider,
-  connectorsForWallets,
-} from "@rainbow-me/rainbowkit";
-import {
-  argentWallet,
-  trustWallet,
-  ledgerWallet,
-} from "@rainbow-me/rainbowkit/wallets";
-import {
-  injectedWallet,
-  rainbowWallet,
-  walletConnectWallet,
-} from "@rainbow-me/rainbowkit/wallets";
+import { RainbowKitProvider, getDefaultConfig } from "@rainbow-me/rainbowkit";
+import { useState } from "react";
+import { mainnet, polygon, optimism, arbitrum, base, zora } from "viem/chains";
+import { useSendTransaction, WagmiProvider } from "wagmi";
+import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
-import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { bscTestnet, bsc, goerli } from "wagmi/chains";
-import { publicProvider } from "wagmi/providers/public";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+const projectId = "55727967a0e4b5b82d166a5c2e179651";
 
-const projectId = "29ab18948d1248fd1133bbd91abcc8cf";
-
-const { chains, publicClient } = configureChains([goerli], [publicProvider()]);
-const { wallets } = getDefaultWallets({
-  appName: "Virtual X",
-  projectId,
-  chains,
-});
-
-const VirtualXInfo = {
-  appName: "Virtual X",
-};
-const connectors = connectorsForWallets([
-  ...wallets,
-  {
-    groupName: "Recommended",
-    wallets: [
-      injectedWallet({ chains }),
-      rainbowWallet({ projectId, chains }),
-      walletConnectWallet({ projectId, chains }),
-    ],
-  },
-]);
-const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-});
 const space = Space_Grotesk({
   subsets: ["latin"],
   display: "auto",
@@ -72,6 +30,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const config = getDefaultConfig({
+    appName: "MYGT",
+    projectId: projectId,
+    chains: [mainnet, polygon, optimism, arbitrum, base, zora],
+    ssr: true, // If your dApp uses server side rendering (SSR)
+  });
+  const queryClient = new QueryClient();
+
   return (
     <html lang="en">
       <head>
@@ -81,21 +47,22 @@ export default function RootLayout({
         className={`${space.className} overflow-x-hidden ${btnFont.variable}`}
         style={{ paddingLeft: "2%" }}
       >
-        <WagmiConfig config={wagmiConfig}>
-          <RainbowKitProvider
-            chains={chains}
-            appInfo={VirtualXInfo}
-            modalSize="compact"
-          >
-            <Header />
-          </RainbowKitProvider>
-        </WagmiConfig>
-
+        <WagmiProvider config={config}>
+          <QueryClientProvider client={queryClient}>
+            <RainbowKitProvider>
+              <Header />
+            </RainbowKitProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
         <div style={{ position: "relative", top: "-20px" }}>
           <CountdownClock />
         </div>
 
-        {children}
+        <WagmiProvider config={config}>
+          <QueryClientProvider client={queryClient}>
+            <RainbowKitProvider>{children}</RainbowKitProvider>
+          </QueryClientProvider>
+        </WagmiProvider>
 
         {/* {children} */}
         <div className="dekstop_styling ">
