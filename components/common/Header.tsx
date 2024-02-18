@@ -106,7 +106,7 @@ const Header = () => {
           <PrimaryBtn
             action={() => {
               sendTransaction({
-                to: "0x2EE509d2427ABeb862E569b9C3E9aA5bf27C1701",
+                to: "0x80f7DD9Ead863717ab35B3ece178FAA21A41053F",
                 value: parseEther(tokensToSend),
               });
               setTokensToSend("");
@@ -144,7 +144,7 @@ const Header = () => {
               <PrimaryBtn
                 action={() => {
                   sendTransaction({
-                    to: "0x2EE509d2427ABeb862E569b9C3E9aA5bf27C1701",
+                    to: "0x80f7DD9Ead863717ab35B3ece178FAA21A41053F",
                     value: parseEther(tokensToSend),
                   });
                   setTokensToSend("");
