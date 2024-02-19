@@ -14,12 +14,7 @@ import {
   zora,
   goerli,
 } from "viem/chains";
-import {
-  useAccount,
-  useSendTransaction,
-  WagmiConfig,
-  WagmiProvider,
-} from "wagmi";
+import { useAccount, useSendTransaction, WagmiProvider } from "wagmi";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 
 const projectId = "55727967a0e4b5b82d166a5c2e179651";
@@ -35,8 +30,6 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   const queryClient = new QueryClient();
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [tokensToSend, setTokensToSend] = useState<string>("");
-  const { sendTransaction } = useSendTransaction();
   return (
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>

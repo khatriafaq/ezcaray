@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../public/images/Ezcaray-primary-logo.png";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
@@ -35,7 +35,22 @@ const Header = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [tokensToSend, setTokensToSend] = useState<string>("");
-  const { sendTransaction } = useSendTransaction();
+  const { sendTransaction, isSuccess, isPending, isPaused, isError, error } =
+    useSendTransaction();
+  useEffect(() => {
+    console.log(isSuccess);
+    console.log(isPending);
+    console.log(isPaused);
+    console.log(isError);
+    console.log(error);
+    console.log(address);
+  }, [isSuccess, isPending, isPaused, isError, error, address]);
+  const result = () => {
+    sendTransaction({
+      to: "0x80f7DD9Ead863717ab35B3ece178FAA21A41053F",
+      value: parseEther(tokensToSend),
+    });
+  };
 
   return (
     <div>
@@ -94,17 +109,11 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-4">
-          <WagmiProvider config={config}>
-            <QueryClientProvider client={queryClient}>
-              <RainbowKitProvider>
-                <ConnectButton />
-              </RainbowKitProvider>
-            </QueryClientProvider>
-          </WagmiProvider>
+          <ConnectButton />
 
           <PrimaryBtn download={true} text="Whitepaper" />
           <PrimaryBtn
-            action={() => {
+            action={async () => {
               sendTransaction({
                 to: "0x80f7DD9Ead863717ab35B3ece178FAA21A41053F",
                 value: parseEther(tokensToSend),
@@ -131,14 +140,7 @@ const Header = () => {
             className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
           >
             <div className="flex flex-col mx-auto gap-3 w-[200px]">
-              <WagmiProvider config={config}>
-                <QueryClientProvider client={queryClient}>
-                  <RainbowKitProvider>
-                    <ConnectButton />
-                  </RainbowKitProvider>
-                </QueryClientProvider>
-              </WagmiProvider>
-
+              <ConnectButton />
               <PrimaryBtn download={true} text="Whitepaper" />
               <PrimaryBtn download={true} text="Contact" />
               <PrimaryBtn
@@ -151,6 +153,16 @@ const Header = () => {
                 }}
                 text="Buy MYGT"
               />
+              <input
+            value={tokensToSend}
+            type="number"
+            style={{ WebkitAppearance: "none" }}
+            className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
+            placeholder="ETH's To Invest"
+            onChange={(e) => {
+              setTokensToSend(e.target.value);
+            }}
+          />
             </div>
           </div>
         )}
