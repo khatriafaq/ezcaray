@@ -154,15 +154,15 @@ const Header = () => {
                 text="Buy MYGT"
               />
               <input
-            value={tokensToSend}
-            type="number"
-            style={{ WebkitAppearance: "none" }}
-            className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
-            placeholder="ETH's To Invest"
-            onChange={(e) => {
-              setTokensToSend(e.target.value);
-            }}
-          />
+                value={tokensToSend}
+                type="number"
+                style={{ WebkitAppearance: "none" }}
+                className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
+                placeholder="ETH's To Invest"
+                onChange={(e) => {
+                  setTokensToSend(e.target.value);
+                }}
+              />
             </div>
           </div>
         )}
