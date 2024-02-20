@@ -6,12 +6,15 @@ import AboutUsSection from "@/components/AboutUsSection";
 import Faqs from "@/components/Faqs/Faqs";
 import { FaqsData } from "@/components/Faqs/FaqsData";
 import RoadMapSection from "@/components/RoadMapSection";
+import BenefitSection from "@/components/BenefitSection";
 
 export default function Home() {
   return (
-    
     <main className="overflow-x-hidden">
-      <section className="main-container mb-0 xl:flex xxl:items-start justify-between text-orange-100" id="hero">
+      <section
+        className="main-container mb-0 xl:flex xxl:items-start justify-between text-orange-100"
+        id="hero"
+      >
         {/* hero text container */}
         <div className=" text-center lg:text-left xl:pt-10">
           <div>
@@ -63,7 +66,7 @@ export default function Home() {
 
         <div className="xl:w-[40%] my-16 order-1 xl:order-2">
           <div className="xl:text-4xl text-2xl font-bold xxl:text-6xl">
-            <span className="text-brandColor">MYGOLD TOKEN</span> <br />{" "}
+            <span className="text-brandColor">MYGOLD TOKEN</span> <br />
             <p className="text-orange-100 pt">
               Your Asset, Anchored in Precious Trust
             </p>
@@ -75,12 +78,14 @@ export default function Home() {
           <p className="text-dark2 font-bold xxl:text-2xl pr-10">
             Ezcaray Mining Corp does the work on African ground and MyGold Token
             is a business share much beyond old-fashioned opportunities for the
-            rich. Start with 65 USDT/Token.
+            rich. Start with 60 USDT/Token.
           </p>
 
           {/* <button className="font-SourceSans3 bg-brandColor mt-8 text-2xl px-8 font-bold leading-150 hover:bg-transparent border border-brandColor hover:text-brandColor text-white py-4 rounded-2xl">Buy PreSale</button> */}
         </div>
       </section>
+
+      <BenefitSection />
 
       <AboutUsSection />
 
