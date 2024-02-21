@@ -32,7 +32,6 @@ export default function Home() {
           <h1 className="text-[44.89px] -tracking-[2.469px] leading-[105%] md:text-[85px] xl:tracking-normal xl:text-[65px] xxl:text-[90px] xxl:tracking-[-1.934px] xl:whitespace-nowrap hero-text">
             by<span className="text-dark2"></span>{" "}
             <span className="text-brandColor">GOLD</span> <br />
-            <span> Secured in Vault</span>
           </h1>
           <button className="btn my-6 text-xl md:text-2xl xxl:text-4xl xxl:my-8 text-yellow-500">
             Secured by Gold, Powered by Trust.
@@ -41,6 +40,9 @@ export default function Home() {
             Shaping Tomorrow's Finances, Backed by the Timeless Value of Gold.
             powered by cryptocurrencies,
             <br /> blockchain technology &<br /> artifical intellegence.
+            <p className="text-brandColor">
+              TOKEN ADDRESS: 0xEC0D3Fde1939e554123Ace9644ec6ae635B0256a
+            </p>
           </p>
         </div>
 
