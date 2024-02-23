@@ -46,27 +46,27 @@ export default function Home() {
           </p>
         </div>
 
-        {/* phone image container*/}
-        <div className="w-[340px] md:w-full xl:flex items-end xl:left-[127px] xxl:left-[112px] relative z-10 pt-12 -ml-6 mb-10 md:-ml-14 xl:-ml-0 xl:-mt-20 xl:pt-2 xl:-mb-[4rem] xl:-mr-2 xxl:-mt-24 xxl:mb-[3rem] xxl:-mr-10">
+        {/* hand image container*/}
+        <div className="w-[390px] pt-2 md:w-full md:-ml-14 xl:-ml-0 xl:flex xl:left-[127px] xl:-mt-20 xl:pt-2 xl:-mb-[4rem] xl:-mr-2 xxl:-mt-24 xxl:mb-[3rem] xxl:-mr-10 xxl:left-[112px]">
           <Image
             src={Phone}
             alt="phone"
             quality={90}
-            className="scale-125 xl:scale-75 rounded-3xl"
+            className="rounded-3xl scale-99 md:scale-125 xl:scale-75"
           />
         </div>
       </section>
 
-      <section className="main-container flex flex-col md:flex-row text-white bg-dark rounded-[57px] pb-0 md:pb-10 xl:pb-0 md:px-2 md:mb-40 relative z-20 xxl:-mt-16  xxl:top-[-6px] items-center">
-        <div className="md:absolute md:-bottom-1 md:right-0 md:w-1/2 xl:w-[60%] xl:-ml-8 xl:static flex items-end order-2 md:order-1">
+      <section className="main-container flex flex-col items-center md:flex-row md:pb-10 md:px-2 md:mb-40 xl:pb-0 xxl:-mt-16  xxl:top-[-6px]">
+        <div className="flex items-end order-2 md:order-1 md:absolute md:-bottom-1 md:right-0 md:w-1/2 xl:w-[60%] xl:-ml- xl:static ">
           <Image
             src={PhoneDisply}
             alt="phoneDisply"
-            className="h-[350px] md:h-[700px] md:w-[800px] rounded-xl"
+            className="h-[350px] md:h-[700px] md:w-[800px] rounded-3xl"
           />
         </div>
 
-        <div className="xl:w-[40%] my-16 order-1 xl:order-2">
+        <div className="xl:w-[40%] my-8 order-1 xl:order-2">
           <div className="xl:text-4xl text-2xl font-bold xxl:text-6xl">
             <span className="text-brandColor">MYGOLD TOKEN</span> <br />
             <p className="text-orange-100 pt">

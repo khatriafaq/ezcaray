@@ -264,7 +264,7 @@ h3 {
 
 .number-after::after {
   content: "";
-  height: 80px;
+  height: 130px;
   background: transparent;
   border-left: 2px dashed #3b82f6;
   position: absolute;

@@ -112,6 +112,7 @@ const RoadMapSection = () => {
                 <div
                   className="mx-auto flex items-start gap-4 mt-4 max-w-[360px] h-[120px]"
                   key={index}
+                  style={{ marginBottom: item.no === 6 ? "70px" : "0" }}
                 >
                   <div
                     className={`number-container before:w-10 before:h-10 text-black ${
