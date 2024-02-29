@@ -7,10 +7,17 @@ import Faqs from "@/components/Faqs/Faqs";
 import { FaqsData } from "@/components/Faqs/FaqsData";
 import RoadMapSection from "@/components/RoadMapSection";
 import BenefitSection from "@/components/BenefitSection";
+import YoutubeSection from "@/components/YoutubeSection";
+import WhatsApp from "@/components/WhatsApp";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden -mt-14">
+      <div className="flex justify-center align-center">
+        <button className="btn my-6 text-xl md:text-2xl xxl:text-4xl xxl:my-8 text-yellow-500">
+          MYGT Tokens Originally $66, Now at $60 in ETH – Grab the Discount!
+        </button>
+      </div>
       <section
         className="main-container mb-0 xl:flex xxl:items-start justify-between text-orange-100"
         id="hero"
@@ -91,10 +98,14 @@ export default function Home() {
 
       <AboutUsSection />
 
+      <YoutubeSection />
+
       <RoadMapSection />
 
       <TeamSection />
 
+      <WhatsApp />
+      
       <Faqs faqs={FaqsData} />
     </main>
   );
