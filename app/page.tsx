@@ -45,8 +45,8 @@ export default function Home() {
           </button>
           <p className="sub-title-large xl:pb-2 xxl:pb-20">
             Shaping Tomorrow's Finances, Backed by the Timeless Value of Gold.
-            powered by cryptocurrencies,
-            <br /> blockchain technology &<br /> artifical intellegence.
+            powered by blockchain technology & <br /> artificial intelligence.<br />
+            
             <p className="text-brandColor">
               TOKEN ADDRESS: 0xEC0D3Fde1939e554123Ace9644ec6ae635B0256a
             </p>
@@ -105,7 +105,7 @@ export default function Home() {
       <TeamSection />
 
       <WhatsApp />
-      
+
       <Faqs faqs={FaqsData} />
     </main>
   );
