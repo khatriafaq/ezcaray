@@ -142,7 +142,6 @@ const Header = () => {
             <div className="flex flex-col mx-auto gap-3 w-[200px]">
               <ConnectButton />
               <PrimaryBtn download={true} text="Whitepaper" />
-              <PrimaryBtn download={true} text="Contact" />
               <PrimaryBtn
                 action={() => {
                   sendTransaction({
