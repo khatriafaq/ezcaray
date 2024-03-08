@@ -42,7 +42,7 @@ const Header = () => {
     console.log(isPending);
     console.log(isPaused);
     console.log(isError);
-    console.log(error);
+    isError ? alert(error) : null;
     console.log(address);
   }, [isSuccess, isPending, isPaused, isError, error, address]);
   const result = () => {
