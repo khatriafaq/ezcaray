@@ -15,7 +15,7 @@ export default function Home() {
     <main className="overflow-x-hidden -mt-14">
       <div className="flex justify-center align-center">
         <button className="btn my-6 text-xl md:text-2xl xxl:text-4xl xxl:my-8 text-yellow-500">
-          MYGT Tokens Originally $66, Now at $60 in ETH – Grab the Discount!
+          MYGT Tokens Originally $78, Now at $65 in MATIC – Grab the Discount!
         </button>
       </div>
       <section
@@ -45,8 +45,8 @@ export default function Home() {
           </button>
           <p className="sub-title-large xl:pb-2 xxl:pb-20">
             Shaping Tomorrow's Finances, Backed by the Timeless Value of Gold.
-            powered by blockchain technology & <br /> artificial intelligence.<br />
-            
+            powered by blockchain technology & <br /> artificial intelligence.
+            <br />
             <p className="text-brandColor">
               TOKEN ADDRESS: 0xEC0D3Fde1939e554123Ace9644ec6ae635B0256a
             </p>
@@ -87,7 +87,7 @@ export default function Home() {
           <p className="text-dark2 font-bold xxl:text-2xl pr-10">
             Ezcaray Mining Corp does the work on African ground and MyGold Token
             is a business share much beyond old-fashioned opportunities for the
-            rich. Start with 60 USDT/Token.
+            rich. Start with 65 USDT/Token.
           </p>
 
           {/* <button className="font-SourceSans3 bg-brandColor mt-8 text-2xl px-8 font-bold leading-150 hover:bg-transparent border border-brandColor hover:text-brandColor text-white py-4 rounded-2xl">Buy PreSale</button> */}

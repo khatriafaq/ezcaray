@@ -24,7 +24,7 @@ const RoadMapSection = () => {
       no: 4,
       title: "1st quarter of 2024 - Launch of MYGT",
       desc: "MYGT Token Sale",
-      status: "upcoming",
+      status: "completed",
     },
     {
       no: 5,

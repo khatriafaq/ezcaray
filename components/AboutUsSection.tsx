@@ -29,7 +29,7 @@ const AboutUsSection = () => {
                   digital asset. Our mission is to provide you with a secure and
                   reliable financial instrument that bridges the gap between
                   traditional value and the digital future. As the pioneers of
-                  gold-backed stablecoins, we bring you My Gold Token – a
+                  gold-backed security token, we bring you My Gold Token – a
                   revolutionary asset designed to empower your transactions with
                   unparalleled stability.
                 </p>

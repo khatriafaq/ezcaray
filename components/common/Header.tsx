@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Logo from "../../public/images/Ezcaray-primary-logo.png";
+import Logo from "../../public/images/ezcaray-security-token.jpg";
 import PrimaryBtn from "../ui/PrimaryBtn";
 import { ConnectButton, darkTheme, Theme } from "@rainbow-me/rainbowkit";
 import Data from "./config.json";
@@ -47,7 +47,7 @@ const Header = () => {
   }, [isSuccess, isPending, isPaused, isError, error, address]);
   const result = () => {
     sendTransaction({
-      to: "0x2EE509d2427ABeb862E569b9C3E9aA5bf27C1701",
+      to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
       value: parseEther(tokensToSend),
     });
   };
@@ -115,7 +115,7 @@ const Header = () => {
           <PrimaryBtn
             action={async () => {
               sendTransaction({
-                to: "0x2EE509d2427ABeb862E569b9C3E9aA5bf27C1701",
+                to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
                 value: parseEther(tokensToSend),
               });
               setTokensToSend("");
@@ -127,7 +127,7 @@ const Header = () => {
             type="number"
             style={{ WebkitAppearance: "none" }}
             className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
-            placeholder="ETH's To Invest"
+            placeholder="MATIC To Invest"
             onChange={(e) => {
               setTokensToSend(e.target.value);
             }}
@@ -145,7 +145,7 @@ const Header = () => {
               <PrimaryBtn
                 action={() => {
                   sendTransaction({
-                    to: "0x2EE509d2427ABeb862E569b9C3E9aA5bf27C1701",
+                    to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
                     value: parseEther(tokensToSend),
                   });
                   setTokensToSend("");
@@ -157,7 +157,7 @@ const Header = () => {
                 type="number"
                 style={{ WebkitAppearance: "none" }}
                 className="font-SourceSans3 bg-brandColor border-[3px] border-brandColor button-small text-white rounded-xl px-4 py-2 hover:bg-dark active:border-b-[3px] active:border-lightPink"
-                placeholder="ETH's To Invest"
+                placeholder="MATIC To Invest"
                 onChange={(e) => {
                   setTokensToSend(e.target.value);
                 }}
