@@ -62,9 +62,7 @@ export default function RootLayout({
             </RainbowKitProvider>
           </QueryClientProvider>
         </WagmiProvider>
-        <div style={{ position: "relative", top: "-20px" }}>
-          <CountdownClock />
-        </div>
+        <div style={{ position: "relative", top: "-20px" }}></div>
 
         <WagmiProvider config={config}>
           <QueryClientProvider client={queryClient}>

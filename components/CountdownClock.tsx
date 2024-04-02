@@ -10,7 +10,7 @@ const clockFont = Poppins({
 
 export default function CountdownClock() {
   const calculateTimeLeft = () => {
-    const targetDate: any = new Date("2023-09-29T17:00:00Z"); // Replace with your target end date
+    const targetDate: any = new Date("2024-04-03T17:00:00");
     const currentDate: any = new Date();
     const timeDifference = targetDate - currentDate;
 
@@ -31,7 +31,6 @@ export default function CountdownClock() {
         seconds,
       };
     } else {
-      // If the target date has passed, return all zeros
       return {
         days: 0,
         hours: 0,
@@ -59,43 +58,51 @@ export default function CountdownClock() {
   const secondsValue = Math.max(0, Math.min(99, timeLeft.seconds));
 
   return (
-    <div
-      style={{ textShadow: "5px 5px 20px #FF69B4" }}
-      className={`justify-center md:my-3 text-base text-white flex md:gap-x-5 gap-x-2 ${clockFont.variable}`}
-    >
-      {/* <div>
-        <h4 className="my-0.5 md:text-4xl text-sm sm:text-base text-center">
-          PRESALE IS LIVE NOW !!
-          <span className="text-sm sm:text-base md:text-2xl">
-            ( Token Address : 0xa975Be9202cE26ddE8bcE29034bE42bcD4861E36 )
+    <div>
+      <div
+        style={{ textShadow: "5px 5px 20px #FF69B4" }}
+        className={`justify-center md:my-3 text-base text-white flex md:gap-x-5 flex-row gap-x-2 ${clockFont.variable}`}
+      >
+        <div>
+          <h4 className="my-0.5 md:text-4xl text-sm sm:text-base text-center">
+            SEED SALE WILL BE LIVE IN
+          </h4>
+        </div>
+        <div>
+          <span className="countdown md:text-4xl text-sm">
+            <span>{daysValue}</span>
           </span>
-        </h4>
-      </div> */}
-
-      {/* <div>
-        <span className="countdown md:text-4xl text-sm">
-          <span>{daysValue}</span>
-        </span>
-        days
+          {daysValue > 1 ? "days" : "day"}
+        </div>
+        <div>
+          <span className="countdown md:text-4xl text-sm">
+            <span>{hoursValue}</span>
+          </span>
+          {hoursValue > 1 ? "hours" : "hour"}
+        </div>
+        <div>
+          <span className="countdown md:text-4xl text-sm">
+            <span>{minutesValue}</span>
+          </span>
+          {minutesValue > 1 ? "mins" : "min"}
+        </div>
+        <div>
+          <span className="countdown md:text-4xl text-sm">
+            <span>{secondsValue}</span>
+          </span>
+          {secondsValue > 1 ? "secs" : "sec"}
+        </div>
       </div>
-      <div>
-        <span className="countdown md:text-4xl text-sm">
-          <span>{hoursValue}</span>
-        </span>
-        hours
+      <div className="justify-center md:my-3 md:text-2xl flex md:gap-x-5 flex-row gap-x-2 text-pink-300">
+        <a
+          href="https://www.pinksale.finance/launchpad/polygon/0x4b2533C21a8691b5fD0248e28242212F34dBE8f8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Click here to Grab The Discount on <span className=" ">Pinksale</span>
+          !!!
+        </a>
       </div>
-      <div>
-        <span className="countdown md:text-4xl text-sm">
-          <span>{minutesValue}</span>
-        </span>
-        min
-      </div>
-      <div>
-        <span className="countdown md:text-4xl text-sm">
-          <span>{secondsValue}</span>
-        </span>
-        sec
-      </div> */}
     </div>
   );
 }

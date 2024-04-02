@@ -20,6 +20,7 @@ import {
 } from "wagmi/chains";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { parseEther } from "viem";
+import CountdownClock from "../CountdownClock";
 const projectId = "55727967a0e4b5b82d166a5c2e179651";
 const config = getDefaultConfig({
   appName: "MYGT",
@@ -54,6 +55,7 @@ const Header = () => {
 
   return (
     <div>
+      <CountdownClock />
       <header className="main-container bg-dark flex justify-between items-center rounded-[38px] mt-10 py-[13px] px-[28px] relative z-20">
         {/* logo */}
         <div className="logo flex items-center">
@@ -109,10 +111,10 @@ const Header = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-4">
-          <ConnectButton />
+          {/* <ConnectButton /> */}
 
           <PrimaryBtn download={true} text="Whitepaper" />
-          <PrimaryBtn
+          {/* <PrimaryBtn
             action={async () => {
               sendTransaction({
                 to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
@@ -131,7 +133,7 @@ const Header = () => {
             onChange={(e) => {
               setTokensToSend(e.target.value);
             }}
-          />
+          /> */}
         </div>
 
         {/* Mobile Menu */}
@@ -140,9 +142,9 @@ const Header = () => {
             className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
           >
             <div className="flex flex-col mx-auto gap-3 w-[200px]">
-              <ConnectButton />
+              {/* <ConnectButton /> */}
               <PrimaryBtn download={true} text="Whitepaper" />
-              <PrimaryBtn
+              {/* <PrimaryBtn
                 action={() => {
                   sendTransaction({
                     to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
@@ -161,7 +163,7 @@ const Header = () => {
                 onChange={(e) => {
                   setTokensToSend(e.target.value);
                 }}
-              />
+              /> */}
             </div>
           </div>
         )}
