@@ -285,8 +285,9 @@ h3 {
 .roadmap-bg {
   background: url("/mygt-rm.png");
   background-repeat: no-repeat;
-  background-position: 50% 60%;
-  background-size: 1000px 551px;
+  background-position: 50% 75%;
+  background-size: 550px 400px;
+  border-radius: 50px;
 }
 
 @media screen and (max-width: 1160px) {

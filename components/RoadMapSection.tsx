@@ -26,6 +26,9 @@ const RoadMapSection = () => {
       desc: "MYGT Token Sale",
       status: "completed",
     },
+  ];
+
+  const postLaunchData = [
     {
       no: 5,
       title: "2nd quarter of 2024 - Exchange Listing",
@@ -34,13 +37,9 @@ const RoadMapSection = () => {
     },
     {
       no: 6,
-      title:
-        "3rd quarter of 2024 - Tracking Mineral and Mining on the Blockchain",
-      desc: "Empowering mineral and mining through blockchain, ensuring transparent, traceable, and ethical practices at every stage of the supply chain.",
+      title: "Tracking Mineral and Mining on the Blockchain",
+      desc: "Empowering mineral and mining through blockchain, ensuring transparent, traceable, and ethical practices.",
     },
-  ];
-
-  const postLaunchData = [
     {
       no: 7,
       title: "AI Integration and Testing",
@@ -48,29 +47,29 @@ const RoadMapSection = () => {
     },
     {
       no: 8,
-      title: "Mining Expansion - Permit Approval",
-      desc: "Obtain permits for the expansion of mining operations into a 50 square kilometer area.",
+      title: "Mining Expansion",
+      desc: "Mining Expansion in Sierra Leone, Mexico, South Africe. Miners association under MYGOLD Coin led by EZCARAY Mining",
     },
-    {
-      no: 9,
-      title: "Exploration of New Gold Fields",
-      desc: "Identify and explore new gold fields in South Africa, Peru, Colombia, Chile, and Ecuador. Conduct feasibility studies and assessments.",
-    },
-    {
-      no: 10,
-      title: "Onboarding Preparation",
-      desc: "Prepare the framework for onboarding gold mining corporations and associates. Establish communication channels for collaboration.",
-    },
-    {
-      no: 11,
-      title: "Collaborative Agreements",
-      desc: "Establish collaborative agreements with mining entities. Define roles and responsibilities for the associates joining the MYGT group ",
-    },
-    {
-      no: 12,
-      title: "Sky Is The Limit",
-      desc: "Possibility Of Expansion to Other Parts of the World",
-    },
+    // {
+    //   no: 9,
+    //   title: "Exploration of New Gold Fields",
+    //   desc: "Identify and explore new gold fields in South Africa, Peru, Colombia, Chile, and Ecuador. Conduct feasibility studies and assessments.",
+    // },
+    // {
+    //   no: 10,
+    //   title: "Onboarding Preparation",
+    //   desc: "Prepare the framework for onboarding gold mining corporations and associates. Establish communication channels for collaboration.",
+    // },
+    // {
+    //   no: 11,
+    //   title: "Collaborative Agreements",
+    //   desc: "Establish collaborative agreements with mining entities. Define roles and responsibilities for the associates joining the MYGT group ",
+    // },
+    // {
+    //   no: 12,
+    //   title: "Sky Is The Limit",
+    //   desc: "Possibility Of Expansion to Other Parts of the World",
+    // },
   ];
   return (
     <section className="main-container mt-10" id="roadmap">

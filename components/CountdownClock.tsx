@@ -65,10 +65,10 @@ export default function CountdownClock() {
       >
         <div>
           <h4 className="my-0.5 md:text-4xl text-sm sm:text-base text-center">
-            SEED SALE WILL BE LIVE IN
+            SEED SALE IS LIVE NOW!!!
           </h4>
         </div>
-        <div>
+        {/* <div>
           <span className="countdown md:text-4xl text-sm">
             <span>{daysValue}</span>
           </span>
@@ -91,7 +91,7 @@ export default function CountdownClock() {
             <span>{secondsValue}</span>
           </span>
           {secondsValue > 1 ? "secs" : "sec"}
-        </div>
+        </div> */}
       </div>
       <div className="justify-center md:my-3 md:text-2xl flex md:gap-x-5 flex-row gap-x-2 text-pink-300">
         <a
@@ -100,7 +100,7 @@ export default function CountdownClock() {
           rel="noopener noreferrer"
         >
           Click here to Grab The Discount on <span className=" ">Pinksale</span>
-          !!!
+          ...
         </a>
       </div>
     </div>
