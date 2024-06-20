@@ -63,11 +63,11 @@ export default function CountdownClock() {
         style={{ textShadow: "5px 5px 20px #FF69B4" }}
         className={`justify-center md:my-3 text-base text-white flex md:gap-x-5 flex-row gap-x-2 ${clockFont.variable}`}
       >
-        <div>
+        {/* <div>
           <h4 className="my-0.5 md:text-4xl text-sm sm:text-base text-center">
             SEED SALE IS LIVE NOW!!!
           </h4>
-        </div>
+        </div> */}
         {/* <div>
           <span className="countdown md:text-4xl text-sm">
             <span>{daysValue}</span>
@@ -93,16 +93,16 @@ export default function CountdownClock() {
           {secondsValue > 1 ? "secs" : "sec"}
         </div> */}
       </div>
-      <div className="justify-center md:my-3 md:text-2xl flex md:gap-x-5 flex-row gap-x-2 text-pink-300">
-        <a
-          href="https://www.pinksale.finance/launchpad/polygon/0x4b2533C21a8691b5fD0248e28242212F34dBE8f8"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Click here to Grab The Discount on <span className=" ">Pinksale</span>
-          ...
-        </a>
-      </div>
+        {/* <div className="justify-center md:my-3 md:text-2xl flex md:gap-x-5 flex-row gap-x-2 text-pink-300">
+          <a
+            href="https://www.pinksale.finance/launchpad/polygon/0x4b2533C21a8691b5fD0248e28242212F34dBE8f8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Click here to Grab The Discount on <span className=" ">Pinksale</span>
+            ...
+          </a>
+        </div> */}
     </div>
   );
 }

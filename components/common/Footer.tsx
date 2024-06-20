@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Logo from "../../public/VirtualXLogo-1.svg";
 import Link from "next/link";
 import Telegram from "../../public/telegram.svg";
 import FB from "../../public/Facebook.svg";

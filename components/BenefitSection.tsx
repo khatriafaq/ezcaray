@@ -11,7 +11,7 @@ const BenefitSection = () => {
               <div className=" p-6 sm:p-14 xxl:p-20">
                 <h1 className="md:text-4xl text-2xl font-bold xl:text-6xl text-orange-100">
                   Unlock the Future:{" "}
-                  <span className="text-brandColor">3000%</span> Growth
+                  <span className="text-brandColor">13000%</span> Growth
                   Potential & Beyond!
                 </h1>
                 <p className="my-2 pr-10 sm:my-10 text-[#8A8A8E] font-bold xxl:text-[22px] xxl:leading-[33px]">
