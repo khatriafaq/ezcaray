@@ -16,7 +16,7 @@ export default function Home() {
     <main className="overflow-x-hidden -mt-14">
       <div className="flex justify-center align-center">
         <button className="btn my-6 text-xl md:text-2xl xxl:text-4xl xxl:my-8 text-yellow-500">
-          MYGT Tokens Originally $78, Now at $65 in MATIC – Grab the Discount!
+          Price 78 USD, First emission starting now!
         </button>
       </div>
       <section
