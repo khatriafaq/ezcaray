@@ -36,16 +36,13 @@ const Header = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [tokensToSend, setTokensToSend] = useState<string>("");
-  const { sendTransaction, isSuccess, isPending, isPaused, isError, error } =
-    useSendTransaction();
+  const { sendTransaction, isSuccess, isError, error } = useSendTransaction();
   useEffect(() => {
     console.log(isSuccess);
-    console.log(isPending);
-    console.log(isPaused);
     console.log(isError);
     isError ? alert(error) : null;
     console.log(address);
-  }, [isSuccess, isPending, isPaused, isError, error, address]);
+  }, [isSuccess, isError, error, address]);
   const result = () => {
     sendTransaction({
       to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
@@ -114,7 +111,7 @@ const Header = () => {
           {/* <ConnectButton /> */}
 
           <PrimaryBtn download={true} text="Whitepaper" />
-          {/* <PrimaryBtn
+          <PrimaryBtn
             action={async () => {
               sendTransaction({
                 to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
@@ -133,7 +130,7 @@ const Header = () => {
             onChange={(e) => {
               setTokensToSend(e.target.value);
             }}
-          /> */}
+          />
         </div>
 
         {/* Mobile Menu */}
@@ -142,9 +139,9 @@ const Header = () => {
             className={`w-full pt-6 pb-4 lg:hidden absolute left-0 -bottom-48 bg-dark transition-all rounded-[42px] fade-right`}
           >
             <div className="flex flex-col mx-auto gap-3 w-[200px]">
-              {/* <ConnectButton /> */}
+              <ConnectButton />
               <PrimaryBtn download={true} text="Whitepaper" />
-              {/* <PrimaryBtn
+              <PrimaryBtn
                 action={() => {
                   sendTransaction({
                     to: "0x0bD9Fb8D046737FC7D8FcFeCF27D44264Afe69ab",
@@ -163,7 +160,7 @@ const Header = () => {
                 onChange={(e) => {
                   setTokensToSend(e.target.value);
                 }}
-              /> */}
+              />
             </div>
           </div>
         )}

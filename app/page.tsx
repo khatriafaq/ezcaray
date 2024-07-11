@@ -99,7 +99,7 @@ export default function Home() {
 
       <AboutUsSection />
 
-      {/* <YoutubeSection /> */}
+      <YoutubeSection />
 
       <RoadMapSection />
 
